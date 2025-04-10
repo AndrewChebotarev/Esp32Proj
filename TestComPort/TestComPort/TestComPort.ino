@@ -1,8 +1,14 @@
-void setup() {
-  Serial.begin(115200); // Инициализация UART с Baud Rate 115200
+void setup() 
+{
+  Serial.begin(115200);
 }
 
-void loop() {
-  Serial.println("1"); // Отправка числа 1
-  delay(1000); // Задержка 1 секунда
+void loop() 
+{
+  delay(500);
+  Serial.write(0x01);
+  delay(500);
+  Serial.write(0x07);
+  delay(500);
+  Serial.write(0x1f);
 }
